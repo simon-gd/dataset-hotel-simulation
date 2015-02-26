@@ -1,0 +1,73 @@
+{
+  "name": "dataset-hotel-simulation-18-hours",
+  "version": "0.0.1",
+  "license": "ODC-BY 1.0",
+  "description": "A dataset from designDEVS hotel simulation",
+  "repository": {
+    "url": "https://git.autodesk.com/breslas/dataset-hotel-simulation-18-hours"
+  },
+  "contributors": [{
+    "name": "Simon Breslav",
+    "email": "simon.breslav@autodesk.com"
+  },{
+    "name": "Rhys Goldstein",
+    "email": "rhys.goldstein@autodesk.com"
+  }],
+  "dependencies": {
+    "mongoose": "^3.8.16",
+    "tungus": "0.0.2",
+    "adm-zip": "^0.4.4",
+    "async": "^0.9.0"
+  },
+  "scripts": {
+    "start": "node db_import.js"
+  },
+  "uber-tagger":{
+    "db": {
+      "current": "tingo",
+      "mongo": {
+        "host": "localhost",
+        "port": 27017,
+        "db": "dataset-hotel-simulation-18-hours",
+        "opts": {
+          "auto_reconnect": true,
+          "safe": true
+        }
+      },
+      "tingo": {
+        "path": "db_data/dataset-hotel-simulation-18-hours"
+      }
+    },
+    "samplesPerSecond": 1,
+    "plot_resampled_data": false,
+    "time-scale": "hour",
+    "default_start_time": "January 1, 2014 05:00:00",
+    "schema": "schema.js",
+    "views": [
+      { "name": "Heatmap",
+        "type": "heatmap",
+        "context-data": {"url": "context/index.html", "args": []},
+        "context-width": 1500,
+        "context-height": 650,
+        "intensity": 0.1,
+        "data-paths": {"mouse-moves":{"field": "positionsContextMapped",
+                                      "x":"x",
+                                      "y":"y",
+                                      "time":"time"}}      
+      }
+    ],
+    "main-table": 0,
+    "tables":[
+      {"id": "dataset-hotel-simulation-18-hours",
+       "name": "18 Hour Results",
+       "source": "./src-data/Hotel-Simulation-18-hours.zip",
+       "schema":  "schema.js" 
+      },
+      {"id": "dataset-hotel-simulation-72-hours",
+       "name": "72 Hour Results",
+       "source": "./src-data/Hotel-Simulation-72-hours.zip",
+       "schema":  "schema.js" 
+      } 
+    ]
+  } 
+}
