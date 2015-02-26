@@ -8,9 +8,9 @@ The simulation and data was used in these publications:
 - [Towards Voxel-Based Algorithms for Building Performance Simulation](http://www.autodeskresearch.com/publications/voxelbasedbps)
 - [Towards Visualization of Simulated Occupants and their Interactions with Buildings at Multiple Time Scales](http://www.autodeskresearch.com/publications/multitimescales)
 
-![Floorplan](https://git.autodesk.com/breslas/dataset-hotel-simulation/raw/master/context/floorplan.png)
-![Screenshot1](https://git.autodesk.com/breslas/dataset-hotel-simulation/raw/master/doc/120x-Speedlines---Long-2-18-frame_66.png)
-![Screenshot2](https://git.autodesk.com/breslas/dataset-hotel-simulation/raw/master/doc/3600x-Speedlines---Long-time_12_03-frame_291_v3.png)
+![Floorplan](https://github.com/sbreslav/dataset-hotel-simulation/raw/master/context/floorplan.png)
+![Screenshot1](https://github.com/sbreslav/dataset-hotel-simulation/raw/master/doc/120x-Speedlines---Long-2-18-frame_66.png)
+![Screenshot2](https://github.com/sbreslav/dataset-hotel-simulation/raw/master/doc/3600x-Speedlines---Long-time_12_03-frame_291_v3.png)
 
 ## Building Dataset
 To populate a [MongoDB](http://www.mongodb.org/) or [TingoDB](http://www.tingodb.com/) with the data, follow these steps:
