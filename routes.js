@@ -17,7 +17,7 @@ router.get('/context', function(req, res) {
 
 router.get('/data', function(req, res) {
   var model = schema.model;
-  console.log(model);
+  //console.log(model);
   model.find(function(err, records){
 
   	if(err){
@@ -26,7 +26,7 @@ router.get('/data', function(req, res) {
   	}else{
   		res.status(200).send(records);
   	}
-  })
+  });
   
 });
 
