@@ -241,7 +241,7 @@ module.exports = function(mongoose) {
         }
       },
       "tingo": {
-        "path": "data_db/dataset-hotel-simulation-18-hours"
+        "path": "data_db2/dataset-hotel-simulation-18-hours"
       }
     },
     "samplesPerSecond": 1,

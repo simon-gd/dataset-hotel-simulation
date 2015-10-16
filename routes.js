@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var tungus = require('tungus');
 var mongoose = require('mongoose');
-mongoose.connect('tingodb://data_db/dataset-hotel-simulation-18-hours');
+mongoose.connect('tingodb://data_db2/dataset-hotel-simulation-18-hours');
 var schema = require('./schema')(mongoose);
 
 console.log('Running mongoose version %s', mongoose.version);
