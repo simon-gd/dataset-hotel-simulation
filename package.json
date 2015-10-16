@@ -14,7 +14,8 @@
     "debug": "~2.1.0",
     "swig": "~1.4.2",
     "tungus": "0.0.5",
-    "mongoose": "~3.8.16"
+    "mongoose": "~3.8.16",
+    "bson": "~0.4.19"
   },
   "devDependencies": {
     "gulp": "~3.8.10",
