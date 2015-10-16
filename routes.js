@@ -23,7 +23,8 @@ router.get('/data', function(req, res) {
   		console.error(err);
   		res.status(500).send(err);
   	}else{
-  		res.status(200).json(records);
+  		console.log(records[0]);
+  		res.status(200).send(records[0]);
   	}
   })
   
