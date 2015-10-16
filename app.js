@@ -17,7 +17,7 @@ app.set('view engine', 'swig');
 
 app.use(favicon(__dirname + '/public/img/favicon.ico'));
 app.use(logger('dev'));
-app.use(bodyParser.json({limit: 100000, string:false}));
+app.use(bodyParser.json({limit: 100000, strict:false}));
 app.use(bodyParser.urlencoded({
   extended: true
 }));

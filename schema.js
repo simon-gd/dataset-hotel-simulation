@@ -241,7 +241,7 @@ module.exports = function(mongoose) {
         }
       },
       "tingo": {
-        "path": "db_data/dataset-hotel-simulation-18-hours"
+        "path": "data_db/dataset-hotel-simulation-18-hours"
       }
     },
     "samplesPerSecond": 1,
@@ -266,12 +266,12 @@ module.exports = function(mongoose) {
     "tables":[
       {"id": "dataset-hotel-simulation-18-hours",
        "name": "18 Hour Results",
-       "source": "./src-data/Hotel-Simulation-18-hours.zip",
+       "source": "./data_raw/Hotel-Simulation-18-hours.zip",
        "schema":  "schema.js" 
       },
       {"id": "dataset-hotel-simulation-72-hours",
        "name": "72 Hour Results",
-       "source": "./src-data/Hotel-Simulation-72-hours.zip",
+       "source": "./data_raw/Hotel-Simulation-72-hours.zip",
        "schema":  "schema.js" 
       } 
     ]

@@ -2,22 +2,18 @@
 var path = require('path');
 var fs = require('fs');
 var AdmZip = require('adm-zip');
-var cfg = JSON.parse(fs.readFileSync("./package.json"));
+var tungus = require('tungus');  
 var async = require("async");
-var uberConfig = cfg["uber-tagger"];
-var tables = uberConfig["tables"];
-var mainTable = tables[uberConfig["main-table"]];
-
-//console.log("mongo dirver path", global.MONGOOSE_DRIVER_PATH);
-
-if(uberConfig.db.current == "tingo"){
-  require('tungus');  
-}
 
 var mongoose = require('mongoose');
 
+var schema = require('./schema.js')(mongoose);
+var uberConfig = schema.settings;
+var tables = uberConfig["tables"];
+var mainTable = tables[uberConfig["main-table"]];
+
 console.log('Running mongoose version %s', mongoose.version);
-var Record = require("./schema.js")(mongoose).model;//mongoose.model('Record');
+var Record = schema.model;//mongoose.model('Record');
 
 /**
  * Connect to the local db file
