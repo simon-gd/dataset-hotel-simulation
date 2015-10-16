@@ -228,5 +228,54 @@ module.exports = function(mongoose) {
 
   var Record = mongoose.model("Record", recordSchema);
 
-  return {schema: recordSchema, model: Record};
+  var c8_settings = {
+    "db": {
+      "current": "tingo",
+      "mongo": {
+        "host": "localhost",
+        "port": 27017,
+        "db": "dataset-hotel-simulation-18-hours",
+        "opts": {
+          "auto_reconnect": true,
+          "safe": true
+        }
+      },
+      "tingo": {
+        "path": "db_data/dataset-hotel-simulation-18-hours"
+      }
+    },
+    "samplesPerSecond": 1,
+    "plot_resampled_data": false,
+    "time-scale": "hour",
+    "default_start_time": "January 1, 2014 05:00:00",
+    "schema": "schema.js",
+    "views": [
+      { "name": "Heatmap",
+        "type": "heatmap",
+        "context-data": {"url": "context/index.html", "args": []},
+        "context-width": 1500,
+        "context-height": 650,
+        "intensity": 0.1,
+        "data-paths": {"mouse-moves":{"field": "positionsContextMapped",
+                                      "x":"x",
+                                      "y":"y",
+                                      "time":"time"}}      
+      }
+    ],
+    "main-table": 0,
+    "tables":[
+      {"id": "dataset-hotel-simulation-18-hours",
+       "name": "18 Hour Results",
+       "source": "./src-data/Hotel-Simulation-18-hours.zip",
+       "schema":  "schema.js" 
+      },
+      {"id": "dataset-hotel-simulation-72-hours",
+       "name": "72 Hour Results",
+       "source": "./src-data/Hotel-Simulation-72-hours.zip",
+       "schema":  "schema.js" 
+      } 
+    ]
+  };
+
+  return {schema: recordSchema, model: Record, settings: c8_settings};
 };

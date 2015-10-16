@@ -17,6 +17,6 @@
   </head>
 
   <body id="body">
-  <img src="floorplan.png">
+  <img src="img/floorplan.png">
   </body>
 </html>
