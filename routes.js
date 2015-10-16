@@ -17,14 +17,14 @@ router.get('/context', function(req, res) {
 
 router.get('/data', function(req, res) {
   var model = schema.model;
+  console.log(model);
   model.find(function(err, records){
 
   	if(err){
   		console.error(err);
   		res.status(500).send(err);
   	}else{
-  		console.log(records[0]);
-  		res.status(200).send(records[0]);
+  		res.status(200).send(records);
   	}
   })
   
