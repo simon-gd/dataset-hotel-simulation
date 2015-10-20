@@ -1,21 +1,4 @@
 {
-	 "c8":{ "samplesPerSecond": 1,
-            "plot_resampled_data": false,
-            "time-scale": "hour",
-            "default_start_time": "January 1, 2014 05:00:00",
-            "views": [
-              { "name": "Heatmap",
-                "type": "heatmap",
-                "context-data": {"url": "context/index.html", "args": []},
-                "context-width": 1500,
-                "context-height": 650,
-                "intensity": 0.1,
-                "data-paths": {"mouse-moves":{"field": "positionsContextMapped",
-                                              "x":"x",
-                                              "y":"y",
-                                              "time":"time"}}
-              }]
-    },
 	"fields":[
 			{"id":"id", "name":"ID", "dtype": "uint32"}, 
             {"id":"first_name", "name":"First Name", "dtype": "string"}, 

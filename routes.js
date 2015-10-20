@@ -44,6 +44,25 @@ router.get('/db_export', function(req, res) {
 
 router.get('/schema.json', function(req, res) {
   var myschema = require("./json_table_schema.json");
+
+  var contextURL = req.protocol + '://' + req.get('host') + "/context.html";
+  myschema.c8 = { "samplesPerSecond": 1,
+            "plot_resampled_data": false,
+            "time-scale": "hour",
+            "default_start_time": "January 1, 2014 05:00:00",
+            "views": [
+              { "name": "Heatmap",
+                "type": "heatmap",
+                "context-data": {"url": contextURL, "args": []},
+                "context-width": 1500,
+                "context-height": 650,
+                "intensity": 0.1,
+                "data-paths": {"mouse-moves":{"field": "positionsContextMapped",
+                                              "x":"x",
+                                              "y":"y",
+                                              "time":"time"}}
+              }]
+  };
   res.status(200).jsonp(myschema);
 });
 
