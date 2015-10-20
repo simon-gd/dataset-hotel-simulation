@@ -56,7 +56,7 @@ router.get('/datapackage.json', function(req, res) {
                                    format: "json",
                                    schema: "schema.json"}],
                       };
-	res.status(200).json(datapackage);
+	res.status(200).send(JSON.stringify(datapackage, null, 2));
 });
 
 module.exports = router;
