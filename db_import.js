@@ -170,6 +170,12 @@ function processJSONfile(data){
 
    // Calculate total consumption
    for(p in people){
+    people[id]["positions"].count = people[id]["positions"].time.length;
+    if(people[id]["window_opening"]){
+      people[id]["window_opening"].count = people[id]["window_opening"].time.length;
+    }
+    people[id]["positionsContextMapped"].count = people[id]["positionsContextMapped"].time.length;
+    
     // water_consumption
     var total = 0;
     var water_consumption = people[p]["water_consumption"];
@@ -265,6 +271,14 @@ function loadData (filepath) {
 
 
 function finaldone (err) {
-  if (err) console.error(err);
-  mongoose.disconnect();
+  if (err){
+   console.error(err);
+  } else{
+
+    mongoose.disconnect();
+
+  }
+
+
+  
 }

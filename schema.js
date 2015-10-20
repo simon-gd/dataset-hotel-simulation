@@ -21,22 +21,24 @@ module.exports = function(mongoose) {
     , home_station: Schema.Types.Mixed
     , role: String
     , positions: { 
+                  count: Number,
                   time: [Number]
                   , floor: [Number]
                   , x: [Number]
                   , y: [Number]
       }
-    , positionsContextMapped: { 
+    , positionsContextMapped: {
+                  count: Number, 
                   time: [Number]
                   , x: [Number]
                   , y: [Number]
       }
-    , energy_consumption: { 
+    , energy_consumption: {
                   time: [Number]
                   , total: Number
                   , series: [Number]
       }
-    , water_consumption: { 
+    , water_consumption: {
                   time: [Number]
                   , total: Number
                   , series: [Number]
@@ -47,7 +49,8 @@ module.exports = function(mongoose) {
                   , series: [Number]
       }
     , window_opening: { 
-                  time: [Number]
+                  count: Number
+                  , time: [Number]
                   , series: [Schema.Types.Mixed]
       }
   });
@@ -241,27 +244,9 @@ module.exports = function(mongoose) {
         }
       },
       "tingo": {
-        "path": "data_db2/dataset-hotel-simulation-18-hours"
+        "path": "data_db/dataset-hotel-simulation-18-hours"
       }
     },
-    "samplesPerSecond": 1,
-    "plot_resampled_data": false,
-    "time-scale": "hour",
-    "default_start_time": "January 1, 2014 05:00:00",
-    "schema": "schema.js",
-    "views": [
-      { "name": "Heatmap",
-        "type": "heatmap",
-        "context-data": {"url": "context/index.html", "args": []},
-        "context-width": 1500,
-        "context-height": 650,
-        "intensity": 0.1,
-        "data-paths": {"mouse-moves":{"field": "positionsContextMapped",
-                                      "x":"x",
-                                      "y":"y",
-                                      "time":"time"}}      
-      }
-    ],
     "main-table": 0,
     "tables":[
       {"id": "dataset-hotel-simulation-18-hours",
