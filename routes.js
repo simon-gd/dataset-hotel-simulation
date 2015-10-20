@@ -18,7 +18,7 @@ router.get('/context.html', function(req, res) {
 
 router.get('/data.json', function(req, res) {
   var data = require("./data.json");
-  res.status(200).json(data);
+  res.status(200).jsonp(data);
 });
 
 
@@ -44,7 +44,7 @@ router.get('/db_export', function(req, res) {
 
 router.get('/schema.json', function(req, res) {
   var myschema = require("./json_table_schema.json");
-  res.status(200).json(myschema);
+  res.status(200).jsonp(myschema);
 });
 
 router.get('/datapackage.json', function(req, res) {
@@ -56,7 +56,7 @@ router.get('/datapackage.json', function(req, res) {
                                    format: "json",
                                    schema: "schema.json"}],
                       };
-	res.status(200).send(JSON.stringify(datapackage, null, 2));
+	res.status(200).jsonp(datapackage);
 });
 
 module.exports = router;
