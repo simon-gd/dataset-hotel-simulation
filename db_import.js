@@ -173,6 +173,9 @@ function processJSONfile(data){
     people[p]["positions"].count = people[p]["positions"].time.length;
     if(people[p]["window_opening"]){
       people[p]["window_opening"].count = people[p]["window_opening"].time.length;
+    }else{
+      people[p]["window_opening"] = {};
+      people[p]["window_opening"].count = 0;
     }
     people[p]["positionsContextMapped"].count = people[p]["positionsContextMapped"].time.length;
     
