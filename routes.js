@@ -31,7 +31,7 @@ router.get('/db_export', function(req, res) {
       res.status(500).send(err);
     }else{
       if(records){
-         fs.writeFile("data.json", JSON.stringify(records, null, 2), function (err) {
+         fs.writeFile("data.json", JSON.stringify(records), function (err) {
             res.status(200).send("Records saved");
          });
       }else{
