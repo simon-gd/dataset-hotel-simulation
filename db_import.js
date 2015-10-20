@@ -170,11 +170,11 @@ function processJSONfile(data){
 
    // Calculate total consumption
    for(p in people){
-    people[id]["positions"].count = people[id]["positions"].time.length;
-    if(people[id]["window_opening"]){
-      people[id]["window_opening"].count = people[id]["window_opening"].time.length;
+    people[p]["positions"].count = people[p]["positions"].time.length;
+    if(people[p]["window_opening"]){
+      people[p]["window_opening"].count = people[p]["window_opening"].time.length;
     }
-    people[id]["positionsContextMapped"].count = people[id]["positionsContextMapped"].time.length;
+    people[p]["positionsContextMapped"].count = people[p]["positionsContextMapped"].time.length;
     
     // water_consumption
     var total = 0;
