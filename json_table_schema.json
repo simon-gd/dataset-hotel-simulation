@@ -5,7 +5,7 @@
             {"id":"last_name", "name":"Last Name", "dtype": "string"}, 
             {"id":"gender", "name":"Gender", "dtype": "string"}, 
             {"id":"age", "name":"Age", "dtype": "uint16", "aggregate": "avg"},
-            {"id":"age_category", "name":"Age Category", "dtype": "uint16"}, 
+            {"id":"age_category", "name":"Age Category", "dtype": "string"}, 
             {"id":"height", "name":"Height", "dtype": "uint16", "aggregate": "avg"},
             {"id":"weight", "name":"Weight", "dtype": "uint16", "aggregate": "avg"}, 
             {"id":"bmi", "name":"BMI", "dtype": "float32", "aggregate": "avg"}, 
