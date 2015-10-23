@@ -18,7 +18,7 @@ router.get('/context.html', function(req, res) {
 
 router.get('/data.json', function(req, res) {
   var data = require("./data.json");
-  res.status(200).json(data);
+  res.status(200).jsonp(data);
 });
 
 
@@ -63,7 +63,7 @@ router.get('/schema.json', function(req, res) {
                                               "time":"time"}}
               }]
   };
-  res.status(200).json(myschema);
+  res.status(200).jsonp(myschema);
 });
 
 router.get('/datapackage.json', function(req, res) {
@@ -75,7 +75,7 @@ router.get('/datapackage.json', function(req, res) {
                                    format: "json",
                                    schema: "schema.json"}],
                       };
-	res.status(200).json(datapackage);
+	res.status(200).jsonp(datapackage);
 });
 
 module.exports = router;
