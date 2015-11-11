@@ -1,0 +1,1 @@
+callback({"name":"dataset-hotel-simulation","title":"Dataset Hotel Simulation","base":"https://c8datasets.blob.core.windows.net/dataset-hotel-simulation/","resources":[{"path":"data.json","format":"json","schema":"schema.json"}]})
