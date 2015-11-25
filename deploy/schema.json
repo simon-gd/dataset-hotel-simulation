@@ -1,1 +1,216 @@
-callback({"fields":[{"id":"id","name":"ID","dtype":"uint32"},{"id":"first_name","name":"First Name","dtype":"string"},{"id":"last_name","name":"Last Name","dtype":"string"},{"id":"gender","name":"Gender","dtype":"string"},{"id":"age","name":"Age","dtype":"uint16","aggregate":"avg"},{"id":"age_category","name":"Age Category","dtype":"string"},{"id":"height","name":"Height","dtype":"uint16","aggregate":"avg"},{"id":"weight","name":"Weight","dtype":"uint16","aggregate":"avg"},{"id":"bmi","name":"BMI","dtype":"float32","aggregate":"avg"},{"id":"bmi_category","name":"BMI Category","dtype":"string"},{"id":"group","name":"Group","dtype":"string"},{"id":"role","name":"Role","dtype":"string"},{"id":"positionsFloor","name":"Floor","path":"positions.count","description":"Location on the floor","color":"#1f77b4","dtype":"timeseries","display-dtype":"int32","time-dtype":"int32","time-scale":"ms","time-path":"positions.time","series-type":"continuous","series-dtype":"int32","series-units":"position","series-path":"positions.floor","filter":"interp"},{"id":"positionsX","name":"X","path":"positions.count","color":"#aec7e8","dtype":"timeseries","display-dtype":"int32","time-dtype":"int32","time-scale":"ms","time-path":"positions.time","series-type":"continuous","series-dtype":"int32","series-units":"position","series-path":"positions.x","filter":"interp"},{"id":"positionsY","name":"Y","path":"positions.count","color":"#ff7f0e","dtype":"timeseries","display-dtype":"int32","time-dtype":"int32","time-scale":"ms","time-path":"positions.time","series-type":"continuous","series-dtype":"int32","series-units":"position","series-path":"positions.x","filter":"interp"},{"id":"energy_consumption_d","name":"Energy","path":"energy_consumption.total","color":"#ffbb78","dtype":"timeseries","display-dtype":"int32","display-units":"Wh","time-dtype":"int32","time-scale":"ms","time-path":"energy_consumption.time","series-type":"continuous-rate","series-dtype":"int32","series-units":"W","series-path":"energy_consumption.series","filter":"interp2","aggregate":"avg"},{"id":"water_consumption_d","name":"Water","path":"water_consumption.total","color":"#2ca02c","dtype":"timeseries","display-dtype":"int32","display-units":"L","time-dtype":"int32","time-scale":"ms","time-path":"water_consumption.time","series-type":"continuous-rate","series-dtype":"int32","series-units":"L/min","series-path":"water_consumption.series","filter":"interp2","aggregate":"avg"},{"id":"occupant_temperatures_d","name":"Temperature","path":"occupant_temperatures.avg","color":"#98df8a","dtype":"timeseries","display-dtype":"int32","time-dtype":"int32","time-scale":"ms","time-path":"occupant_temperatures.time","series-type":"continuous","series-dtype":"int32","series-units":"ºC","series-path":"energy_consumption.series","filter":"interp","aggregate":"avg"},{"id":"window_opening_d","name":"Windows","path":"window_opening.count","color":"#d62728","dtype":"timeseries","display-dtype":"int32","time-dtype":"int32","time-scale":"ms","time-path":"window_opening.time","series-type":"event-simple","series-dtype":"int32","series-units":"open","series-path":"window_opening.series","filter":"hist","aggregate":"sum"}],"c8":{"samplesPerSecond":1,"plot_resampled_data":false,"time-scale":"hour","default_start_time":"January 1, 2014 05:00:00","views":[{"name":"Heatmap","type":"heatmap","context-data":{"url":"https://c8datasets.blob.core.windows.net/dataset-hotel-simulation/context.html","args":[]},"context-width":1500,"context-height":650,"intensity":0.1,"data-paths":{"mouse-moves":{"field":"positionsContextMapped","x":"x","y":"y","time":"time"}}}]}})
+callback({
+  "fields": [
+    {
+      "id": "id",
+      "name": "ID",
+      "dtype": "uint32"
+    },
+    {
+      "id": "first_name",
+      "name": "First Name",
+      "dtype": "string"
+    },
+    {
+      "id": "last_name",
+      "name": "Last Name",
+      "dtype": "string"
+    },
+    {
+      "id": "gender",
+      "name": "Gender",
+      "dtype": "string"
+    },
+    {
+      "id": "age",
+      "name": "Age",
+      "dtype": "uint16",
+      "aggregate": "avg"
+    },
+    {
+      "id": "age_category",
+      "name": "Age Category",
+      "dtype": "string"
+    },
+    {
+      "id": "height",
+      "name": "Height",
+      "dtype": "uint16",
+      "aggregate": "avg"
+    },
+    {
+      "id": "weight",
+      "name": "Weight",
+      "dtype": "uint16",
+      "aggregate": "avg"
+    },
+    {
+      "id": "bmi",
+      "name": "BMI",
+      "dtype": "float32",
+      "aggregate": "avg"
+    },
+    {
+      "id": "bmi_category",
+      "name": "BMI Category",
+      "dtype": "string"
+    },
+    {
+      "id": "group",
+      "name": "Group",
+      "dtype": "string"
+    },
+    {
+      "id": "role",
+      "name": "Role",
+      "dtype": "string"
+    },
+    {
+      "id": "positionsFloor",
+      "name": "Floor",
+      "path": "positions.count",
+      "description": "Location on the floor",
+      "color": "#1f77b4",
+      "dtype": "timeseries",
+      "display-dtype": "int32",
+      "time-dtype": "int32",
+      "time-scale": "ms",
+      "time-path": "positions.time",
+      "series-type": "continuous",
+      "series-dtype": "int32",
+      "series-units": "position",
+      "series-path": "positions.floor",
+      "filter": "interp"
+    },
+    {
+      "id": "positionsX",
+      "name": "X",
+      "path": "positions.count",
+      "color": "#aec7e8",
+      "dtype": "timeseries",
+      "display-dtype": "int32",
+      "time-dtype": "int32",
+      "time-scale": "ms",
+      "time-path": "positions.time",
+      "series-type": "continuous",
+      "series-dtype": "int32",
+      "series-units": "position",
+      "series-path": "positions.x",
+      "filter": "interp"
+    },
+    {
+      "id": "positionsY",
+      "name": "Y",
+      "path": "positions.count",
+      "color": "#ff7f0e",
+      "dtype": "timeseries",
+      "display-dtype": "int32",
+      "time-dtype": "int32",
+      "time-scale": "ms",
+      "time-path": "positions.time",
+      "series-type": "continuous",
+      "series-dtype": "int32",
+      "series-units": "position",
+      "series-path": "positions.y",
+      "filter": "interp"
+    },
+    {
+      "id": "energy_consumption_d",
+      "name": "Energy",
+      "path": "energy_consumption.total",
+      "color": "#ffbb78",
+      "dtype": "timeseries",
+      "display-dtype": "int32",
+      "display-units": "Wh",
+      "time-dtype": "int32",
+      "time-scale": "ms",
+      "time-path": "energy_consumption.time",
+      "series-type": "continuous-rate",
+      "series-dtype": "int32",
+      "series-units": "W",
+      "series-path": "energy_consumption.series",
+      "filter": "interp2",
+      "aggregate": "avg"
+    },
+    {
+      "id": "water_consumption_d",
+      "name": "Water",
+      "path": "water_consumption.total",
+      "color": "#2ca02c",
+      "dtype": "timeseries",
+      "display-dtype": "int32",
+      "display-units": "L",
+      "time-dtype": "int32",
+      "time-scale": "ms",
+      "time-path": "water_consumption.time",
+      "series-type": "continuous-rate",
+      "series-dtype": "int32",
+      "series-units": "L/min",
+      "series-path": "water_consumption.series",
+      "filter": "interp2",
+      "aggregate": "avg"
+    },
+    {
+      "id": "occupant_temperatures_d",
+      "name": "Temperature",
+      "path": "occupant_temperatures.avg",
+      "color": "#98df8a",
+      "dtype": "timeseries",
+      "display-dtype": "int32",
+      "time-dtype": "int32",
+      "time-scale": "ms",
+      "time-path": "occupant_temperatures.time",
+      "series-type": "continuous",
+      "series-dtype": "int32",
+      "series-units": "ºC",
+      "series-path": "occupant_temperatures.series",
+      "filter": "interp",
+      "aggregate": "avg"
+    },
+    {
+      "id": "window_opening_d",
+      "name": "Windows",
+      "path": "window_opening.count",
+      "color": "#d62728",
+      "dtype": "timeseries",
+      "display-dtype": "int32",
+      "time-dtype": "int32",
+      "time-scale": "ms",
+      "time-path": "window_opening.time",
+      "series-type": "event-simple",
+      "series-dtype": "int32",
+      "series-units": "open",
+      "series-path": "window_opening.series",
+      "filter": "hist",
+      "aggregate": "sum"
+    }
+  ],
+  "c8": {
+    "samplesPerSecond": 1,
+    "plot_resampled_data": false,
+    "time-scale": "hour",
+    "default_start_time": "January 1, 2014 05:00:00",
+    "views": [
+      {
+        "name": "Heatmap",
+        "type": "heatmap",
+        "context-data": {
+          "url": "https://c8datasets.blob.core.windows.net/dataset-hotel-simulation/context.html",
+          "args": [
+            
+          ]
+        },
+        "context-width": 1500,
+        "context-height": 650,
+        "intensity": 0.1,
+        "data-paths": {
+          "mouse-moves": {
+            "field": "positionsContextMapped",
+            "x": "x",
+            "y": "y",
+            "time": "time"
+          }
+        }
+      }
+    ]
+  }
+})
